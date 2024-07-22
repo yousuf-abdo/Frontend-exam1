@@ -1,15 +1,15 @@
 $(document).ready(function() {
-    showHideLoader();
+    showHideLoader('Now Playing');
 });
 
-function  showHideLoader(){
+function  showHideLoader(cat = 'Now Playing'){
     var state = document.readyState;
     if (state == 'interactive') {
             $('.contents').css('display','none');
             $('.loader').css('display','block');
     } else if (state == 'complete') {
         setTimeout(function(){
-            fetchData('Now Playing');
+            fetchData(cat);
             $('.loader').css('display','none');
             $('.contents').css('display','block');
         }, 2000);
@@ -90,7 +90,7 @@ $('.my-input').on('keyup', function(){
     var leng = this.value.length;
     if(leng > 0){
         $('.search>i').css('display', 'inline');
-        fetchData(this.value);
+        showHideLoader(this.value);
     }else{
         $('.search>i').css('display', 'none');
     }
