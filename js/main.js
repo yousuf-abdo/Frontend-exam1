@@ -1,24 +1,25 @@
 $(document).ready(function() {
     showHideLoader();
-    
     // fetchData('Now Playing');
 });
 
+    /* start show / hide loader */
 function  showHideLoader(){
-        document.onreadystatechange = function () {
-            var state = document.readyState;
-            if (state == 'interactive') {
-                $('.contents').css('display','none');
-                $('.loader').css('display','block');
-            } else if (state == 'complete') {
-                setTimeout(function(){
-                   $('.loader').css('display','none');
-                   $('.contents').css('display','block');
-                },2000);
-            }
-          }
+    var state = document.readyState;
+    if (state == 'interactive') {
+            $('.contents').css('display','none');
+            $('.loader').css('display','block');
+    } else if (state == 'complete') {
+        setTimeout(function(){
+            fetchData('Now Playing');
+            $('.loader').css('display','none');
+            $('.contents').css('display','block');
+        }, 2000);
+    }
 }
-    
+    /* end show / hide loader */
+
+
 $('#btnOpenClose').on('click', function(){
     var res = $('#btnOpenClose>i').hasClass('fa fa-times');
     
