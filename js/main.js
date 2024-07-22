@@ -1,9 +1,7 @@
 $(document).ready(function() {
     showHideLoader();
-    // fetchData('Now Playing');
 });
 
-    /* start show / hide loader */
 function  showHideLoader(){
     var state = document.readyState;
     if (state == 'interactive') {
@@ -17,8 +15,6 @@ function  showHideLoader(){
         }, 2000);
     }
 }
-    /* end show / hide loader */
-
 
 $('#btnOpenClose').on('click', function(){
     var res = $('#btnOpenClose>i').hasClass('fa fa-times');
