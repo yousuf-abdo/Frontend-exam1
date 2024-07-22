@@ -1,0 +1,349 @@
+*::selection{
+    background: white;
+    color: #00000050;
+}
+*:root{
+    --main-color: #dc3545;
+    color: white;
+}
+body{
+    background-color: #0D0D0D;
+    box-sizing: border-box;    
+    font-size: 1rem;
+    font-weight: 500;
+    font-style: normal;
+    font-family: Segoe UI Light;
+    line-height: 29px;
+    color: white;
+
+}
+a {
+    text-decoration: none;
+    color: white;
+    transition: 0.5s;
+}
+a:hover{
+    color: var(--main-color);
+}
+.contents-row{
+    background-color: transparent;
+    margin-bottom: 100px;
+}
+.search{
+    background-color: transparent;
+    border-radius: 20px;
+    border: 2px solid white;
+    outline: none;
+    color: white;
+    padding: 2px 10px;
+    margin-top: 100px;
+}
+.search>i{
+    display: none;
+    cursor: pointer;
+}
+.my-input{
+    width: 95%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 4px;
+    font-size: 18px;
+}
+.item{
+    min-height: 420px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.item>img{
+    border-radius: 10px;
+    min-height: 420px;
+    transition: 1s;
+}
+.item:hover > img{
+    transform: scale(1.1) rotate(4deg);
+    /* transform: rotate(4deg); */
+    opacity: 0.5;
+    border-radius: 10px;
+}
+.item:hover .item-details{
+    top: 0;
+    bottom: 0;
+    border-radius: 20px;
+    min-height: 420px;
+}
+.item-details{
+    min-height: 0px;
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    background-color: #dfdbdb57;
+    padding: 8px 16px;
+    color: #EDEDED;
+    border-radius: 30px;
+    transition:1s;
+}
+.item-details .title, .item-details .rating{
+    text-align: center;
+    position: relative;
+    top: 0;
+    transition: 0.5s;
+}
+.item-details .overview{
+    position: relative;
+    top: 0;
+    transition: 1s;
+    margin-bottom: 40px;
+}
+.item-details>.rate-val{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid green;
+    padding: 4px 6px;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.side-bar {
+    width: 70px;
+    height: 100%;
+    display: flex;
+    font-size: 18px;
+    background-color: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+}
+.side-bar .side{
+    /* width: 0px; */
+    height: 100%;
+    padding: 0px;
+    display: none;
+    position: relative;
+    /* left: 0; */
+    top: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.5s
+}
+.side>ul>li{
+    margin: 0 0 18px 0;
+    position: relative;
+    top: 0;
+    display: none;
+}
+.side-bar>.icons{
+    width: 70px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    padding: 25px 0px;
+}
+.copyright{
+    color: #ffffffb6;
+    margin-bottom: 20px;
+}
+#createdBy{
+    color: var(--main-color);
+}
+#btnOpenClose{
+    font-size: x-large;
+}
+.social{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    color: white;
+}
+.rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+.rating label {
+cursor: pointer;
+width: 40px;
+height: 40px;
+background-size: contain;
+background-repeat: no-repeat;
+font-weight: 900;
+font-size: 30px;
+font-family: "Playwrite BE VLG", cursive;
+color: gold;
+}
+.rating input:checked ~ label,
+.rating input:checked ~ label ~ label {
+background-image: url('gold_star.png'); /* Path to the gold star image */
+}
+.rating label:hover,
+.rating label:hover ~ label {
+background-image: url('gold_star.png');
+}
+
+
+
+  
+.my-input-c{
+    width: 95%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 4px 16px;
+    font-size: 18px;
+    text-align: start;
+    margin-top: 18px;
+    border-bottom: solid 2px white;
+}
+.my-input-c::placeholder{
+    text-align: center;
+}
+
+
+.btn-submit{
+    width: auto;
+    outline: none;
+    border: none;
+    background-color: black;
+    color: white;
+    margin-top: 20px;
+    margin-left: 10px;
+    padding: 10px 40px;
+    text-align: start;
+    border-radius: 10px;
+    transition: 0.7s;
+}
+.btn-submit-error{
+    background-color: var(--main-color);
+    color: white;
+}
+button:hover{
+    background-color: white;
+    color: black;
+}
+
+.nav-to-up{
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    z-index: 1000;
+    bottom: 20;
+    right: 20;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    padding: 10px ;
+}
+
+.error-message{
+    color: var(--main-color);
+}
+
+
+ /* Apply the CSS rules */
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button { 
+    /* -webkit-appearance: none; */
+    margin: 0; 
+}
+
+@keyframes vibration {
+    0% { transform: translate(0, 0); }
+    10% { transform: translate(-2px, 2px); }
+    20% { transform: translate(-2px, -2px); }
+    30% { transform: translate(2px, 2px); }
+    40% { transform: translate(2px, -2px); }
+    50% { transform: translate(-2px, 2px); }
+    60% { transform: translate(-2px, -2px); }
+    70% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    90% { transform: translate(-2px, 2px); }
+    100% { transform: translate(0, 0); }
+  }
+  
+  .vibrate {
+    display: inline-block;
+    animation: vibration 0.5s 0.5s;
+  }  
+  @keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes slideOutToLeft {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-400px);
+    }
+}
+@keyframes slideInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(0px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+}
+
+
+
+
+
+
+.contents {
+    display: none;
+}
+.loader {
+    border: 2px solid transparent; /* Light grey */
+    border-top: 2px solid #fff; /* Blue */
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    z-index: 10000;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
